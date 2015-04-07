@@ -1,7 +1,7 @@
 /**
- * onepx.js v1.5
+ * onepx.js
  * Author: BearJ
- * Version: v1.0.0
+ * Version: v1.5.0
  * Date: 2015-4-1
  */
 (function (name, definition) {
