@@ -53,9 +53,9 @@ onepx(".appendItem", true);
 The rule is: selector@custom style&selector@custom style&...
 
 
-##体验
+##DEMO
 
-![](http://wechatui.github.io/swiper/images/example.jpg)
+![](http://wechatui.github.io/onepx/dist/qrcode.png)
 
 ##License
 
