@@ -52,6 +52,19 @@ onepx(".appendItem", true);
 
 The rule is: selector@custom style&selector@custom style&...
 
+#### As onepx draw 1px line after the onepx.js loaded, it may cause page flicker.If you mind, you can do like this:
+```html
+<head>
+    <script type="text/javascript">document.body.style.visibility = "hidden";</script>
+</head>
+<body>
+...
+    <script>
+        onepx(".item");
+        document.body.style.visibility = "visible";
+    </script>
+</body>
+```
 
 ##DEMO
 
