@@ -25,22 +25,22 @@ onepx is a javascript function to draw a retina 1px line without changing any cs
 
 
 ###More Examples
-####Elements match ".item" will be drew
+Elements match ".item" will be drew
 ```script
 onepx(".item");
 ```
 
-####Elements match ".item" or ".box" will be drew
+Elements match ".item" or ".box" will be drew
 ```script
 onepx(".item, .box");
 ```
 
-####Elements match ".item" which parents match ".list" will be drew
+Elements match ".item" which parents match ".list" will be drew
 ```script
 onepx(".item", ".list");
 ```
 
-####Elements match ".appendItem" will be drew, even they are added dynamically
+Elements match ".appendItem" will be drew, even they are added dynamically
 ```script
 onepx(".appendItem", true);
 ```
