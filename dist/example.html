@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="UTF-8">
+    <title>onepx</title>
+    <style type="text/css">
+        a{text-decoration: none;color:dodgerblue;}
+        .onepx_demo{display: inline-block;width: 100px;height: 100px;margin:10px;border: 1px solid;vertical-align: top;}
+
+        .rect{border-color: #fc7e89;}
+        .circle{border-color: #4bbcf6;border-radius: 50%;}
+        .pic{border-color: orange;position: relative;top:10px;vertical-align: bottom;}
+        .list{border-top:1px solid green;list-style:none;padding-left:0;}
+        .list li{border-bottom:1px solid green;}
+        .with_click{text-align: center;}
+        .btn{display: inline-block;width:80px;height:80px;margin-top:10px;background-color: #EEE;}
+        .btn:active{background-color: #DDD;}
+    </style>
+</head>
+<body>
+<div id="onepxBoxesParent">
+    <div>
+        <h3>Normal Element</h3>
+        <div id="addDynamicallyDemo">
+            <div class="onepx_demo rect"></div>
+            <div class="onepx_demo j_onepx rect"></div>
+        </div>
+    </div>
+    <div>
+        <h3>Border Radius</h3>
+        <div class="onepx_demo circle"></div>
+        <div class="onepx_demo j_onepx circle"></div>
+    </div>
+    <div>
+        <h3>Replaced Element</h3>
+        <img class="onepx_demo pic" src="example.jpg" />
+        <img class="onepx_demo j_onepx pic" src="example.jpg" />
+    </div>
+    <div>
+        <h3>List</h3>
+        <ul class="list j_onepx">
+            <li class="j_onepx">1</li>
+            <li class="j_onepx">2</li>
+            <li class="j_onepx">3</li>
+            <li class="j_onepx">4</li>
+            <li class="j_onepx">5</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Click Event & Active</h3>
+        <div>
+            <div class="onepx_demo with_click">
+                <a id="btn1" class="btn" href="javascript:">no onepx</a>
+            </div>
+            <div class="onepx_demo j_onepx with_click" onepx=".with_click:active@border-color:red">
+                <a id="btn2" class="btn" href="javascript:">has onepx</a>
+            </div>
+        </div>
+    </div>
+    <h3>Add Dynamically</h3>
+    <div id="bear"></div>
+</div>
+<a href="javascript:add()">Add an onepx box</a>
+
+<script type="text/javascript" src="onepx.js"></script>
+<script type="text/javascript">
+    document.querySelector("#btn1").onclick = function(){
+        alert("I am not onexp box.");
+    };
+    document.querySelector("#btn2").onclick = function(){
+        alert("I am onexp box and I am active now.");
+    };
+    function add(){
+        var a = document.createElement("div");
+        a.innerHTML = document.getElementById("addDynamicallyDemo").innerHTML;
+        document.getElementById("bear").appendChild(a);
+    }
+    onepx(".j_onepx", "#onepxBoxesParent", true);
+</script>
+</body>
+</html>
